@@ -625,17 +625,17 @@ public static void main(String[] args) throws IOException
                     JOptionPane.PLAIN_MESSAGE, null,
                     possibilities,
                     "");
-					if ((s == "VM1")) {
-						try(FileWriter writer = new FileWriter("ACTIVE_USERS0.txt", append) ){
-						writer.write("");
-					}   catch (IOException a) {System.out.println("NO GOOD");}
-					 try {
-		restartApp();
-	  } 
-	  catch (IOException ae) 
-	  {
-		System.out.println("File not Found");
-	  }}
+			if ((s == "VM1")) {
+			try(FileWriter writer = new FileWriter("ACTIVE_USERS0.txt", append) ){
+			writer.write("");
+			} catch (IOException a) {System.out.println("NO GOOD");}
+			try {
+				restartApp();
+	  		} 
+	  		catch (IOException ae) 
+			  {
+				System.out.println("File not Found");
+	 		 }}
 					if ((s == "VM2")) {
 						try(FileWriter writer = new FileWriter("ACTIVE_USERS1.txt", append) ){
 						writer.write("");
@@ -785,12 +785,11 @@ public static void main(String[] args) throws IOException
 		} );
 		
 	f.add(button7);
-	
-	
+	//Draw Labels
 	f.add(la1);f.add(la2);f.add(la3);f.add(la4);f.add(la5);f.add(la7);f.add(la8);
    
     f.setSize(700,320); 
-	f.setLocationRelativeTo(null);
+    f.setLocationRelativeTo(null);
     f.setLayout(null); 
     f.setVisible(true); 
 
@@ -862,15 +861,4 @@ public static void main(String[] args) throws IOException
 			la5.setText(la5.getText() + " [AFK]");
 			button7.setVisible(false);
 	} else {la5.setVisible(false);}
-	}
-
-
-
-	}
-	
-	
-    
-
-	
-        
-  //Created by Jacob McDonnell of CAI. Don't fuck with my shit :p   
+	}}
